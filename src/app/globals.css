@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Source+Code+Pro&display=swap");
+:root {
+  --dark-gray: #111;
+  --light-gray: #333;
+  --lighter-gray: #666;
+  --dark-white: #aaa;
+  --ligh-white: #ddd;
+  --lighter-white: #fff;
+  --dark-yellow: #b28e0e;
+  --light-yellow: #e4c914;
+  --lighter-yellow: #ede13a;
+}
+
+body {
+  background: linear-gradient(135deg, var(--light-gray), var(--dark-gray));
+  color: #ddd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  font-family: "Fira Code", monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  min-width: 90vw;
+}

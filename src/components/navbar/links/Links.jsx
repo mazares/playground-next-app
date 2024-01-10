@@ -1,19 +1,32 @@
-import Link from "next/link";
 import styles from "./links.module.css";
+import { NavLink } from "react-router-dom";
 
 const Links = () => {
   const links = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
-    { name: "Blog", path: "/blog" },
+    { title: "Home", path: "/" },
+    { title: "About", path: "/about" },
+    { title: "Contact", path: "/contact" },
+    { title: "Blog", path: "/blog" },
   ];
 
+  // TEMPORARY
+
+  const session = true;
+  const isAdmin = true;
+
   return (
-    <div className={styles.link}>
-      {links.map((link, index) => (
-        <NavLink key={index} item={link} />
+    <div className={`${styles.links}`}>
+      {links.map((link) => (
+        <NavLink key={link.title} item={link} />
       ))}
+      {session ? (
+        <>
+          {isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+          <button className={styles.logout}>Log out</button>
+        </>
+      ) : (
+        <NavLink item={{ title: "Login", path: "/login" }} />
+      )}
     </div>
   );
 };

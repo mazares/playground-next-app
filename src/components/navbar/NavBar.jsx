@@ -7,15 +7,13 @@ const NavBar = () => {
     <div className={styles.container}>
       <div className="logo">logo </div>
 
-      <div className="links-box">
-        <Link href="/">Home</Link>
+      <Link href="/">Home</Link>
 
-        <Link href="/about">About</Link>
+      <Link href="/about">About</Link>
 
-        <Link href="/contact">Contact</Link>
+      <Link href="/contact">Contact</Link>
 
-        <Link href="/blog">Blog</Link>
-      </div>
+      <Link href="/blog">Blog</Link>
     </div>
   );
 };

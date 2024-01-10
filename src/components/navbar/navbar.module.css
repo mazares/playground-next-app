@@ -4,8 +4,8 @@
   border-radius: 0.5rem;
   box-shadow: 5px 10px 15px var(--dark-gray);
   width: 90%;
-  display: grid;
-  place-items: center;
-  place-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 1rem;
 }
